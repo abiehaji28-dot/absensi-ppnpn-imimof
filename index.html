@@ -8,7 +8,7 @@
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
-<title>ABSENSI PPNPN IMIMOF</title>
+<title>Daftar Absen PPNPN IMIMOF</title>
 
 <style>
 
@@ -20,294 +20,1269 @@ content="width=device-width, initial-scale=1.0">
 }
 
 body {
-    background: #f1f5f9;
+    background: #f4f6f9;
+    color: #222;
+}
+
+/* =========================
+   LOGIN & REGISTER
+========================= */
+
+.auth-page {
+
     min-height: 100vh;
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     padding: 20px;
+
 }
 
-.container {
+.auth-box {
+
     width: 100%;
+
     max-width: 420px;
+
     background: white;
-    padding: 30px 25px;
+
+    padding: 30px;
+
     border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+
+    box-shadow:
+    0 5px 25px
+    rgba(0,0,0,0.1);
+
 }
 
-h1 {
+.auth-box h1 {
+
     text-align: center;
+
     font-size: 22px;
-    color: #0f172a;
+
     margin-bottom: 10px;
+
 }
 
-.subtitle {
+.auth-box p {
+
     text-align: center;
-    color: #64748b;
-    font-size: 14px;
+
+    color: #777;
+
     margin-bottom: 25px;
+
 }
 
-input {
+input,
+select,
+textarea {
+
     width: 100%;
-    padding: 14px;
-    margin-bottom: 15px;
-    border: 1px solid #cbd5e1;
+
+    padding: 12px;
+
+    margin-top: 10px;
+
     border-radius: 8px;
-    font-size: 16px;
-    outline: none;
+
+    border: 1px solid #ddd;
+
+    background: white;
+
 }
 
-input:focus {
-    border-color: #2563eb;
+textarea {
+
+    resize: vertical;
+
+    min-height: 100px;
+
 }
 
 button {
+
     width: 100%;
-    padding: 14px;
+
+    padding: 12px;
+
+    margin-top: 10px;
+
+    border-radius: 8px;
+
     border: none;
-    border-radius: 8px;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 8px;
-}
 
-.loginBtn {
     background: #2563eb;
-}
 
-.masukBtn {
-    background: #16a34a;
-}
+    color: white;
 
-.pulangBtn {
-    background: #dc2626;
-}
+    cursor: pointer;
 
-.logout {
-    background: #475569;
-    margin-top: 20px;
-}
-
-button:active {
-    transform: scale(0.98);
-}
-
-.hidden {
-    display: none;
-}
-
-.info {
-    background: #f8fafc;
-    padding: 15px;
-    border-radius: 8px;
-    margin: 20px 0;
-    line-height: 1.9;
-}
-
-.location {
-    margin-top: 15px;
-    padding: 15px;
-    background: #eff6ff;
-    border-radius: 8px;
-    font-size: 14px;
-    line-height: 1.8;
-    word-break: break-word;
-}
-
-.status {
-    text-align: center;
-    margin-top: 15px;
     font-weight: bold;
-    line-height: 1.5;
+
 }
 
-.success {
-    color: green;
+button:hover {
+
+    opacity: 0.9;
+
+}
+
+.success-button {
+
+    background: #16a34a;
+
+}
+
+.danger-button {
+
+    background: #dc2626;
+
+}
+
+.auth-switch {
+
+    margin-top: 20px;
+
+    text-align: center;
+
+    color: #2563eb;
+
+    cursor: pointer;
+
 }
 
 .error {
-    color: red;
+
+    color: #dc2626;
+
+    text-align: center;
+
+    margin-top: 15px;
+
 }
 
-.absenStatus {
-    margin-top: 20px;
+.success {
+
+    color: #16a34a;
+
+    text-align: center;
+
+    margin-top: 15px;
+
+}
+
+
+/* =========================
+   USER PAGE
+========================= */
+
+#userPage {
+
+    display: none;
+
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+
+    background: #111827;
+
+    color: white;
+
+    padding: 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+.header h1 {
+
+    font-size: 20px;
+
+}
+
+.header-user {
+
+    text-align: right;
+
+}
+
+.header-user small {
+
+    display: block;
+
+    color: #d1d5db;
+
+    margin-top: 4px;
+
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+
+    background: white;
+
+    padding: 10px;
+
+    display: flex;
+
+    gap: 10px;
+
+    overflow-x: auto;
+
+    box-shadow:
+    0 2px 10px
+    rgba(0,0,0,0.05);
+
+}
+
+.navbar button {
+
+    width: auto;
+
+    margin-top: 0;
+
+    white-space: nowrap;
+
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding: 20px;
+
+}
+
+.section {
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+    0 2px 10px
+    rgba(0,0,0,0.05);
+
+}
+
+.section h2 {
+
+    margin-bottom: 15px;
+
+}
+
+
+/* =========================
+   USER INFO
+========================= */
+
+.user-info {
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(2, 1fr);
+
+    gap: 15px;
+
+}
+
+.info-card {
+
+    background: #f3f4f6;
+
     padding: 15px;
-    background: #f8fafc;
+
+    border-radius: 10px;
+
+}
+
+.info-card span {
+
+    display: block;
+
+    color: #777;
+
+    font-size: 13px;
+
+    margin-bottom: 5px;
+
+}
+
+.info-card strong {
+
+    font-size: 17px;
+
+}
+
+
+/* =========================
+   ABSENSI
+========================= */
+
+.absen-box {
+
+    text-align: center;
+
+}
+
+.absen-box h3 {
+
+    margin-bottom: 10px;
+
+}
+
+.gps-status {
+
+    margin-top: 15px;
+
+    padding: 12px;
+
+    background: #f3f4f6;
+
     border-radius: 8px;
-    line-height: 1.8;
+
+    font-size: 14px;
+
+}
+
+.location {
+
+    margin-top: 10px;
+
+    color: #555;
+
+    font-size: 13px;
+
+    word-break: break-all;
+
+}
+
+
+/* =========================
+   PILIH JENIS
+========================= */
+
+.jenis-box {
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(3, 1fr);
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+
+}
+
+.jenis-btn {
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    background: #f3f4f6;
+
+    color: #222;
+
+    border: 1px solid #ddd;
+
+}
+
+.jenis-btn.active {
+
+    background: #2563eb;
+
+    color: white;
+
+}
+
+
+/* =========================
+   TANGGAL
+========================= */
+
+.tanggal-hari-ini {
+
+    margin-top: 10px;
+
+    padding: 12px;
+
+    background: #f3f4f6;
+
+    border-radius: 8px;
+
+}
+
+
+/* =========================
+   UPLOAD SURAT
+========================= */
+
+.upload-box {
+
+    margin-top: 15px;
+
+    padding: 15px;
+
+    border: 1px dashed #aaa;
+
+    border-radius: 10px;
+
+    background: #f9fafb;
+
+}
+
+.upload-box label {
+
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+
+}
+
+.upload-info {
+
+    margin-top: 8px;
+
+    font-size: 13px;
+
+    color: #666;
+
+    line-height: 1.5;
+
+}
+
+.file-name {
+
+    margin-top: 10px;
+
+    padding: 10px;
+
+    background: #dcfce7;
+
+    color: #166534;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+
+    display: none;
+
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.status {
+
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+}
+
+.hadir {
+
+    background: #dcfce7;
+
+    color: #166534;
+
+}
+
+.izin {
+
+    background: #fef3c7;
+
+    color: #92400e;
+
+}
+
+.sakit {
+
+    background: #fee2e2;
+
+    color: #991b1b;
+
+}
+
+.libur {
+
+    background: #dbeafe;
+
+    color: #1e40af;
+
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+.table-container {
+
+    overflow-x: auto;
+
+}
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+}
+
+th,
+td {
+
+    padding: 12px;
+
+    border-bottom:
+    1px solid #eee;
+
+    text-align: left;
+
+    white-space: nowrap;
+
+}
+
+th {
+
+    background: #f3f4f6;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px) {
+
+    .header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+    .header-user {
+
+        text-align: left;
+
+    }
+
+    .user-info {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .jenis-box {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .container {
+
+        padding: 15px;
+
+    }
+
 }
 
 </style>
 
 </head>
 
+
 <body>
 
-<div class="container">
 
-
-<!-- =========================
+<!-- ==================================================
      LOGIN
-========================= -->
+================================================== -->
 
-<div id="loginPage">
+<div id="loginPage"
+class="auth-page">
+
+<div class="auth-box">
 
 <h1>
-ABSENSI PPNPN IMIMOF
+DAFTAR ABSEN PPNPN IMIMOF
 </h1>
 
-<p class="subtitle">
-Silakan login untuk melakukan absensi
+<p>
+Login Pengguna
 </p>
 
 <input
 type="text"
-id="nama"
-placeholder="Masukkan Nama Lengkap">
-
-<input
-type="text"
-id="username"
-placeholder="Username">
+id="loginUsername"
+placeholder="Username"
+>
 
 <input
 type="password"
-id="password"
-placeholder="Password">
+id="loginPassword"
+placeholder="Password"
+>
 
 <button
-class="loginBtn"
-onclick="login()">
+onclick="loginUser()">
 
 LOGIN
 
 </button>
 
-<p
-id="loginStatus"
-class="status">
-</p>
+<div
+id="loginError"
+class="error">
+</div>
+
+<div
+class="auth-switch"
+onclick="showRegister()">
+
+Belum punya akun?
+Daftar di sini
+
+</div>
+
+</div>
 
 </div>
 
 
-<!-- =========================
-     HALAMAN ABSENSI
-========================= -->
+<!-- ==================================================
+     REGISTER
+================================================== -->
 
-<div
-id="absenPage"
-class="hidden">
+<div id="registerPage"
+class="auth-page"
+style="display:none">
+
+<div class="auth-box">
 
 <h1>
-ABSENSI PPNPN IMIMOF
+DAFTAR ABSEN PPNPN IMIMOF
 </h1>
 
-<p class="subtitle">
-Sistem Absensi Digital
+<p>
+Pendaftaran Pengguna
+</p>
+
+<input
+type="text"
+id="registerNama"
+placeholder="Nama Lengkap"
+>
+
+<input
+type="text"
+id="registerJabatan"
+placeholder="Jabatan"
+>
+
+<input
+type="text"
+id="registerUsername"
+placeholder="Username"
+>
+
+<input
+type="password"
+id="registerPassword"
+placeholder="Password minimal 6 karakter"
+>
+
+<button
+onclick="registerUser()">
+
+DAFTAR
+
+</button>
+
+<div
+id="registerError"
+class="error">
+</div>
+
+<div
+class="auth-switch"
+onclick="showLogin()">
+
+Sudah punya akun?
+Login di sini
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ==================================================
+     USER PAGE
+================================================== -->
+
+<div id="userPage">
+
+
+<!-- HEADER -->
+
+<div class="header">
+
+<div>
+
+<h1>
+DAFTAR ABSEN PPNPN IMIMOF
+</h1>
+
+</div>
+
+<div class="header-user">
+
+<strong
+id="headerNama">
+-
+</strong>
+
+<small
+id="headerJabatan">
+-
+</small>
+
+</div>
+
+</div>
+
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+<button
+onclick="showUserPage('beranda')">
+
+🏠 Beranda
+
+</button>
+
+<button
+onclick="showUserPage('absensi')">
+
+📍 Absensi
+
+</button>
+
+<button
+onclick="showUserPage('riwayat')">
+
+📋 Riwayat
+
+</button>
+
+<button
+onclick="showUserPage('pengajuan')">
+
+📝 Izin / Sakit / Libur
+
+</button>
+
+<button
+class="danger-button"
+onclick="logoutUser()">
+
+🚪 Logout
+
+</button>
+
+</div>
+
+
+<div class="container">
+
+
+<!-- ==================================================
+     BERANDA
+================================================== -->
+
+<div id="beranda">
+
+
+<div class="section">
+
+<h2>
+Informasi Pengguna
+</h2>
+
+<div class="user-info">
+
+
+<div class="info-card">
+
+<span>
+Nama
+</span>
+
+<strong
+id="infoNama">
+-
+</strong>
+
+</div>
+
+
+<div class="info-card">
+
+<span>
+Jabatan
+</span>
+
+<strong
+id="infoJabatan">
+-
+</strong>
+
+</div>
+
+
+<div class="info-card">
+
+<span>
+Username
+</span>
+
+<strong
+id="infoUsername">
+-
+</strong>
+
+</div>
+
+
+<div class="info-card">
+
+<span>
+Status Akun
+</span>
+
+<strong>
+Aktif
+</strong>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<div class="section">
+
+<h2>
+Absensi Hari Ini
+</h2>
+
+<div class="absen-box">
+
+<h3
+id="tanggalHariIni">
+-
+</h3>
+
+<p>
+Silakan melakukan absensi
+sesuai lokasi yang ditentukan.
+</p>
+
+<button
+class="success-button"
+onclick="absenSekarang()">
+
+📍 ABSEN SEKARANG
+
+</button>
+
+<div
+id="gpsStatus"
+class="gps-status">
+
+GPS belum digunakan
+
+</div>
+
+<div
+id="gpsLocation"
+class="location">
+
+-
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<!-- ==================================================
+     ABSENSI
+================================================== -->
+
+<div id="absensi"
+style="display:none">
+
+<div class="section">
+
+<h2>
+Absensi GPS
+</h2>
+
+<p>
+Klik tombol di bawah untuk
+mengambil lokasi GPS dan
+melakukan absensi.
+</p>
+
+<button
+class="success-button"
+onclick="absenSekarang()">
+
+📍 ABSEN SEKARANG
+
+</button>
+
+<div
+id="absensiStatus"
+class="gps-status">
+
+Belum melakukan absensi
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ==================================================
+     RIWAYAT ABSENSI
+================================================== -->
+
+<div id="riwayat"
+style="display:none">
+
+<div class="section">
+
+<h2>
+Riwayat Absensi Saya
+</h2>
+
+<div class="table-container">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>
+Tanggal
+</th>
+
+<th>
+Jam
+</th>
+
+<th>
+Lokasi GPS
+</th>
+
+<th>
+Status
+</th>
+
+</tr>
+
+</thead>
+
+<tbody
+id="riwayatTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+
+<div class="section">
+
+<h2>
+Riwayat Izin / Sakit / Libur
+</h2>
+
+<div class="table-container">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>
+Tanggal
+</th>
+
+<th>
+Jenis
+</th>
+
+<th>
+Keterangan
+</th>
+
+<th>
+Surat Dokter
+</th>
+
+</tr>
+
+</thead>
+
+<tbody
+id="riwayatPengajuanTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ==================================================
+     PENGAJUAN
+================================================== -->
+
+<div id="pengajuan"
+style="display:none">
+
+
+<div class="section">
+
+<h2>
+Pemberitahuan Izin / Sakit / Libur
+</h2>
+
+<p>
+
+Pilih jenis pemberitahuan.
+Data akan langsung tercatat
+dan dapat dilihat oleh admin.
+
 </p>
 
 
-<!-- INFORMASI PEGAWAI -->
+<div class="jenis-box">
 
-<div class="info">
 
-<b>Nama:</b>
-<span id="namaUser"></span>
+<button
+class="jenis-btn"
+id="btnIzin"
+onclick="pilihJenis('Izin')">
 
-<br>
+📝 Izin
 
-<b>Username:</b>
-<span id="userLogin"></span>
+</button>
 
-<br>
 
-<b>Tanggal:</b>
-<span id="tanggal"></span>
+<button
+class="jenis-btn"
+id="btnSakit"
+onclick="pilihJenis('Sakit')">
 
-<br>
+🤒 Sakit
 
-<b>Jam:</b>
-<span id="jam"></span>
+</button>
+
+
+<button
+class="jenis-btn"
+id="btnLibur"
+onclick="pilihJenis('Libur')">
+
+🏖️ Libur
+
+</button>
+
 
 </div>
 
 
-<!-- ABSEN MASUK -->
+<input
+type="hidden"
+id="jenisPengajuan"
+>
 
-<button
-class="masukBtn"
-onclick="absen('masuk')">
-
-🟢 ABSEN MASUK
-
-</button>
-
-
-<!-- ABSEN PULANG -->
-
-<button
-class="pulangBtn"
-onclick="absen('pulang')">
-
-🔴 ABSEN PULANG
-
-</button>
-
-
-<!-- INFORMASI GPS -->
 
 <div
-id="locationInfo"
-class="location hidden">
+id="jenisTerpilih"
+class="tanggal-hari-ini">
 
-<b>📍 Lokasi GPS</b>
-
-<br><br>
-
-Latitude:
-<span id="latitude"></span>
-
-<br>
-
-Longitude:
-<span id="longitude"></span>
-
-<br>
-
-Akurasi:
-<span id="akurasi"></span>
-meter
+Silakan pilih jenis pemberitahuan.
 
 </div>
 
-
-<!-- STATUS ABSENSI -->
 
 <div
-id="absenStatus"
-class="absenStatus">
+id="tanggalPengajuan"
+class="tanggal-hari-ini"
+style="display:none">
 
-Belum melakukan absensi.
+📅 Tanggal otomatis:
+
+<strong
+id="tanggalOtomatis">
+-
+</strong>
 
 </div>
 
 
-<!-- LOGOUT -->
+<div
+id="keteranganBox"
+style="display:none">
+
+<textarea
+id="keteranganPengajuan"
+placeholder="Tuliskan keterangan..."
+></textarea>
+
+</div>
+
+
+<!-- SURAT DOKTER OPSIONAL -->
+
+<div
+id="uploadSuratBox"
+class="upload-box"
+style="display:none">
+
+
+<label>
+
+📄 Surat / Keterangan Dokter
+
+</label>
+
+
+<input
+type="file"
+id="suratDokter"
+accept="image/*,.pdf"
+onchange="cekFileDokter()"
+>
+
+
+<div
+class="upload-info">
+
+Opsional untuk pengajuan sakit.
+
+Format:
+JPG, JPEG, PNG, PDF.
+
+Maksimal 5 MB.
+
+</div>
+
+
+<div
+id="fileName"
+class="file-name">
+</div>
+
+
+</div>
+
 
 <button
-class="logout"
-onclick="logout()">
+id="btnKirimPengajuan"
+onclick="kirimPemberitahuan()"
+style="display:none">
 
-LOGOUT
+KIRIM PEMBERITAHUAN
 
 </button>
+
+
+<div
+id="pengajuanStatus"
+class="success">
+</div>
+
+
+</div>
+
+
+</div>
+
 
 </div>
 
@@ -317,349 +1292,725 @@ LOGOUT
 <script>
 
 
-/* =========================
-   AKUN LOGIN
-========================= */
+/* ==================================================
+   DATA
+================================================== */
 
-const akun = {
+let users =
 
-username: "ppnpn",
+JSON.parse(
 
-password: "123456"
+localStorage.getItem("users")
 
-};
-
-
-/* =========================
-   LOGIN
-========================= */
-
-function login() {
-
-const nama =
-document
-.getElementById("nama")
-.value
-.trim();
-
-const username =
-document
-.getElementById("username")
-.value
-.trim();
-
-const password =
-document
-.getElementById("password")
-.value;
-
-const status =
-document
-.getElementById("loginStatus");
+) || [];
 
 
-if (nama === "") {
+let absensiData =
 
-status.textContent =
-"Silakan masukkan nama lengkap.";
+JSON.parse(
 
-status.className =
-"status error";
+localStorage.getItem("absensiData")
 
-return;
+) || [];
+
+
+let pengajuanData =
+
+JSON.parse(
+
+localStorage.getItem("pengajuanData")
+
+) || [];
+
+
+let currentUser =
+
+JSON.parse(
+
+localStorage.getItem("currentUser")
+
+) || null;
+
+
+
+/* ==================================================
+   SIMPAN DATA
+================================================== */
+
+function saveData() {
+
+
+    localStorage.setItem(
+
+        "users",
+
+        JSON.stringify(users)
+
+    );
+
+
+    localStorage.setItem(
+
+        "absensiData",
+
+        JSON.stringify(absensiData)
+
+    );
+
+
+    localStorage.setItem(
+
+        "pengajuanData",
+
+        JSON.stringify(pengajuanData)
+
+    );
 
 }
 
 
-if (
-username === akun.username &&
-password === akun.password
+
+/* ==================================================
+   LOGIN / REGISTER
+================================================== */
+
+function showLogin() {
+
+
+    document
+    .getElementById("loginPage")
+    .style.display =
+    "flex";
+
+
+    document
+    .getElementById("registerPage")
+    .style.display =
+    "none";
+
+}
+
+
+function showRegister() {
+
+
+    document
+    .getElementById("loginPage")
+    .style.display =
+    "none";
+
+
+    document
+    .getElementById("registerPage")
+    .style.display =
+    "flex";
+
+}
+
+
+
+/* ==================================================
+   REGISTER
+================================================== */
+
+function registerUser() {
+
+
+    let nama =
+
+    document
+    .getElementById("registerNama")
+    .value
+    .trim();
+
+
+    let jabatan =
+
+    document
+    .getElementById("registerJabatan")
+    .value
+    .trim();
+
+
+    let username =
+
+    document
+    .getElementById("registerUsername")
+    .value
+    .trim();
+
+
+    let password =
+
+    document
+    .getElementById("registerPassword")
+    .value;
+
+
+    let error =
+
+    document
+    .getElementById("registerError");
+
+
+    error.innerText = "";
+
+
+    if(
+
+        !nama ||
+
+        !jabatan ||
+
+        !username ||
+
+        !password
+
+    ) {
+
+
+        error.innerText =
+
+        "Semua data wajib diisi.";
+
+
+        return;
+
+    }
+
+
+    if(password.length < 6) {
+
+
+        error.innerText =
+
+        "Password minimal 6 karakter.";
+
+
+        return;
+
+    }
+
+
+    let sudahAda =
+
+    users.find(
+
+        function(user) {
+
+
+            return (
+
+                user.username ===
+
+                username
+
+            );
+
+
+        }
+
+    );
+
+
+    if(sudahAda) {
+
+
+        error.innerText =
+
+        "Username sudah digunakan.";
+
+
+        return;
+
+    }
+
+
+    let userBaru = {
+
+
+        id:
+
+        Date.now(),
+
+
+        nama:
+
+        nama,
+
+
+        jabatan:
+
+        jabatan,
+
+
+        username:
+
+        username,
+
+
+        password:
+
+        password
+
+    };
+
+
+    users.push(
+
+        userBaru
+
+    );
+
+
+    saveData();
+
+
+    alert(
+
+        "Pendaftaran berhasil. Silakan login."
+
+    );
+
+
+    showLogin();
+
+}
+
+
+
+/* ==================================================
+   LOGIN
+================================================== */
+
+function loginUser() {
+
+
+    let username =
+
+    document
+    .getElementById("loginUsername")
+    .value
+    .trim();
+
+
+    let password =
+
+    document
+    .getElementById("loginPassword")
+    .value;
+
+
+    let error =
+
+    document
+    .getElementById("loginError");
+
+
+    error.innerText = "";
+
+
+    let user =
+
+    users.find(
+
+        function(item) {
+
+
+            return (
+
+                item.username ===
+
+                username &&
+
+
+                item.password ===
+
+                password
+
+            );
+
+
+        }
+
+    );
+
+
+    if(!user) {
+
+
+        error.innerText =
+
+        "Username atau password salah.";
+
+
+        return;
+
+    }
+
+
+    currentUser = user;
+
+
+    localStorage.setItem(
+
+        "currentUser",
+
+        JSON.stringify(
+
+            currentUser
+
+        )
+
+    );
+
+
+    bukaHalamanPengguna();
+
+}
+
+
+
+/* ==================================================
+   HALAMAN PENGGUNA
+================================================== */
+
+function bukaHalamanPengguna() {
+
+
+    document
+    .getElementById("loginPage")
+    .style.display =
+    "none";
+
+
+    document
+    .getElementById("registerPage")
+    .style.display =
+    "none";
+
+
+    document
+    .getElementById("userPage")
+    .style.display =
+    "block";
+
+
+    document
+    .getElementById("headerNama")
+    .innerText =
+
+    currentUser.nama;
+
+
+    document
+    .getElementById("headerJabatan")
+    .innerText =
+
+    currentUser.jabatan;
+
+
+    document
+    .getElementById("infoNama")
+    .innerText =
+
+    currentUser.nama;
+
+
+    document
+    .getElementById("infoJabatan")
+    .innerText =
+
+    currentUser.jabatan;
+
+
+    document
+    .getElementById("infoUsername")
+    .innerText =
+
+    currentUser.username;
+
+
+    tampilkanTanggal();
+
+
+    loadRiwayat();
+
+
+    loadRiwayatPengajuan();
+
+}
+
+
+
+/* ==================================================
+   NAVIGASI
+================================================== */
+
+function showUserPage(page) {
+
+
+    let pages = [
+
+        "beranda",
+
+        "absensi",
+
+        "riwayat",
+
+        "pengajuan"
+
+    ];
+
+
+    pages.forEach(
+
+        function(item) {
+
+
+            document
+            .getElementById(item)
+            .style.display =
+            "none";
+
+
+        }
+
+    );
+
+
+    document
+    .getElementById(page)
+    .style.display =
+    "block";
+
+
+    if(page === "riwayat") {
+
+
+        loadRiwayat();
+
+
+        loadRiwayatPengajuan();
+
+
+    }
+
+}
+
+
+
+/* ==================================================
+   TANGGAL
+================================================== */
+
+function getTanggalHariIni() {
+
+
+    let sekarang =
+
+    new Date();
+
+
+    let tahun =
+
+    sekarang.getFullYear();
+
+
+    let bulan =
+
+    String(
+
+        sekarang.getMonth() + 1
+
+    ).padStart(
+
+        2,
+
+        "0"
+
+    );
+
+
+    let tanggal =
+
+    String(
+
+        sekarang.getDate()
+
+    ).padStart(
+
+        2,
+
+        "0"
+
+    );
+
+
+    return (
+
+        tahun +
+
+        "-" +
+
+        bulan +
+
+        "-" +
+
+        tanggal
+
+    );
+
+}
+
+
+function formatTanggalIndonesia(
+
+    tanggal
+
 ) {
 
-document
-.getElementById("loginPage")
-.classList
-.add("hidden");
 
-document
-.getElementById("absenPage")
-.classList
-.remove("hidden");
+    let date =
 
+    new Date(
 
-document
-.getElementById("namaUser")
-.textContent =
-nama;
+        tanggal +
+
+        "T00:00:00"
+
+    );
 
 
-document
-.getElementById("userLogin")
-.textContent =
-username;
+    return date.toLocaleDateString(
 
+        "id-ID",
 
-tampilkanWaktu();
+        {
 
-}
+            weekday:
+            "long",
 
-else {
+            year:
+            "numeric",
 
-status.textContent =
-"Username atau password salah!";
+            month:
+            "long",
 
-status.className =
-"status error";
+            day:
+            "numeric"
 
-}
+        }
+
+    );
 
 }
 
 
-/* =========================
-   WAKTU
-========================= */
-
-function tampilkanWaktu() {
-
-const sekarang =
-new Date();
-
-document
-.getElementById("tanggal")
-.textContent =
-sekarang
-.toLocaleDateString("id-ID");
-
-document
-.getElementById("jam")
-.textContent =
-sekarang
-.toLocaleTimeString("id-ID");
-
-}
-
-setInterval(
-tampilkanWaktu,
-1000
-);
+function tampilkanTanggal() {
 
 
-/* =========================
-   ABSEN
-========================= */
+    let tanggal =
 
-function absen(jenis) {
-
-const status =
-document
-.getElementById("absenStatus");
+    getTanggalHariIni();
 
 
-if (!navigator.geolocation) {
+    document
+    .getElementById(
+        "tanggalHariIni"
+    )
+    .innerText =
 
-status.innerHTML =
-"❌ GPS tidak didukung.";
+    formatTanggalIndonesia(
 
-return;
+        tanggal
+
+    );
 
 }
 
 
-status.innerHTML =
-"📍 Sedang mengambil lokasi GPS...";
 
+/* ==================================================
+   ABSENSI GPS
+================================================== */
 
-navigator
-.geolocation
-.getCurrentPosition(
+function absenSekarang() {
 
-function(position) {
 
+    if(!currentUser) {
 
-const latitude =
-position.coords.latitude;
 
-const longitude =
-position.coords.longitude;
+        alert(
 
-const akurasi =
-position.coords.accuracy;
+            "Silakan login terlebih dahulu."
 
+        );
 
-document
-.getElementById("latitude")
-.textContent =
-latitude.toFixed(6);
 
+        return;
 
-document
-.getElementById("longitude")
-.textContent =
-longitude.toFixed(6);
+    }
 
 
-document
-.getElementById("akurasi")
-.textContent =
-Math.round(akurasi);
+    let status =
 
+    document
+    .getElementById(
+        "gpsStatus"
+    );
 
-document
-.getElementById("locationInfo")
-.classList
-.remove("hidden");
 
+    let locationText =
 
-const waktu =
-new Date()
-.toLocaleTimeString(
-"id-ID"
-);
+    document
+    .getElementById(
+        "gpsLocation"
+    );
 
-const tanggal =
-new Date()
-.toLocaleDateString(
-"id-ID"
-);
 
+    let absensiStatus =
 
-const nama =
-document
-.getElementById("namaUser")
-.textContent;
+    document
+    .getElementById(
+        "absensiStatus"
+    );
 
 
-if (jenis === "masuk") {
+    if(!navigator.geolocation) {
 
-status.innerHTML =
 
-"🟢 <b>ABSEN MASUK BERHASIL</b><br><br>" +
+        status.innerText =
 
-"Nama: " + nama +
+        "GPS tidak didukung perangkat.";
 
-"<br>Tanggal: " + tanggal +
 
-"<br>Jam: " + waktu +
+        return;
 
-"<br>Latitude: " +
-latitude.toFixed(6) +
+    }
 
-"<br>Longitude: " +
-longitude.toFixed(6);
 
-}
+    status.innerText =
 
-else {
+    "Sedang mengambil lokasi GPS...";
 
-status.innerHTML =
 
-"🔴 <b>ABSEN PULANG BERHASIL</b><br><br>" +
+    navigator.geolocation.getCurrentPosition(
 
-"Nama: " + nama +
 
-"<br>Tanggal: " + tanggal +
+        function(position) {
 
-"<br>Jam: " + waktu +
 
-"<br>Latitude: " +
-latitude.toFixed(6) +
+            let latitude =
 
-"<br>Longitude: " +
-longitude.toFixed(6);
+            position.coords.latitude;
 
-}
 
+            let longitude =
 
-},
+            position.coords.longitude;
 
-function(error) {
 
+            let sekarang =
 
-if (error.code === 1) {
-
-status.innerHTML =
-"❌ Izin lokasi ditolak. Silakan izinkan lokasi.";
-
-}
-
-else if (error.code === 2) {
-
-status.innerHTML =
-"❌ Lokasi tidak tersedia. Aktifkan GPS.";
-
-}
-
-else if (error.code === 3) {
-
-status.innerHTML =
-"❌ Waktu mengambil lokasi habis. Coba lagi.";
-
-}
-
-else {
-
-status.innerHTML =
-"❌ Gagal mengambil lokasi.";
-
-}
-
-},
-
-{
-
-enableHighAccuracy: true,
-
-timeout: 15000,
-
-maximumAge: 0
-
-}
-
-);
-
-}
-
-
-/* =========================
-   LOGOUT
-========================= */
-
-function logout() {
-
-document
-.getElementById("absenPage")
-.classList
-.add("hidden");
-
-document
-.getElementById("loginPage")
-.classList
-.remove("hidden");
-
-
-document
-.getElementById("nama")
-.value = "";
-
-document
-.getElementById("username")
-.value = "";
-
-document
-.getElementById("password")
-.value = "";
-
-
-document
-.getElementById("absenStatus")
-.innerHTML =
-"Belum melakukan absensi.";
-
-}
-
-</script>
-
-</body>
-
-</html>
+            new Date()

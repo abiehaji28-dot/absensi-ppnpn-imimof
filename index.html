@@ -10,12 +10,7 @@ content="width=device-width, initial-scale=1.0">
 
 <title>ABSENSI PPNPN IMIMOF</title>
 
-
 <style>
-
-/* =========================
-   DASAR HALAMAN
-========================= */
 
 * {
     box-sizing: border-box;
@@ -24,1155 +19,646 @@ content="width=device-width, initial-scale=1.0">
     font-family: Arial, sans-serif;
 }
 
-
 body {
-
     background: #f1f5f9;
-
     min-height: 100vh;
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     padding: 20px;
-
 }
-
-
-/* =========================
-   KOTAK UTAMA
-========================= */
 
 .container {
-
     width: 100%;
-
     max-width: 420px;
-
     background: white;
-
     padding: 30px 25px;
-
     border-radius: 15px;
-
-    box-shadow:
-    0 5px 20px
-    rgba(0,0,0,0.15);
-
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
 }
-
-
-/* =========================
-   JUDUL
-========================= */
 
 h1 {
-
     text-align: center;
-
     font-size: 22px;
-
     color: #0f172a;
-
     margin-bottom: 10px;
-
 }
-
 
 .subtitle {
-
     text-align: center;
-
     color: #64748b;
-
     font-size: 14px;
-
     margin-bottom: 25px;
-
 }
-
-
-/* =========================
-   INPUT
-========================= */
 
 input {
-
     width: 100%;
-
     padding: 14px;
-
     margin-bottom: 15px;
-
-    border:
-    1px solid
-    #cbd5e1;
-
+    border: 1px solid #cbd5e1;
     border-radius: 8px;
-
     font-size: 16px;
-
     outline: none;
-
 }
-
 
 input:focus {
-
-    border-color:
-    #2563eb;
-
+    border-color: #2563eb;
 }
-
-
-/* =========================
-   TOMBOL
-========================= */
 
 button {
-
     width: 100%;
-
     padding: 14px;
-
     border: none;
-
     border-radius: 8px;
-
-    background:
-    #2563eb;
-
     color: white;
-
     font-size: 16px;
-
     font-weight: bold;
-
     cursor: pointer;
-
-    margin-top: 5px;
-
+    margin-top: 8px;
 }
 
-
-button:hover {
-
-    background:
-    #1d4ed8;
-
+.loginBtn {
+    background: #2563eb;
 }
 
+.masukBtn {
+    background: #16a34a;
+}
 
-/* =========================
-   TOMBOL LOGOUT
-========================= */
+.pulangBtn {
+    background: #dc2626;
+}
 
 .logout {
-
-    background:
-    #dc2626;
-
-    margin-top: 15px;
-
+    background: #475569;
+    margin-top: 20px;
 }
 
-
-.logout:hover {
-
-    background:
-    #b91c1c;
-
+button:active {
+    transform: scale(0.98);
 }
-
-
-/* =========================
-   SEMBUNYIKAN
-========================= */
 
 .hidden {
-
     display: none;
-
 }
-
-
-/* =========================
-   INFORMASI USER
-========================= */
 
 .info {
-
-    background:
-    #f8fafc;
-
+    background: #f8fafc;
     padding: 15px;
-
     border-radius: 8px;
-
     margin: 20px 0;
-
-    line-height: 1.8;
-
+    line-height: 1.9;
 }
-
-
-/* =========================
-   INFORMASI LOKASI
-========================= */
 
 .location {
-
     margin-top: 15px;
-
     padding: 15px;
-
-    background:
-    #eff6ff;
-
+    background: #eff6ff;
     border-radius: 8px;
-
     font-size: 14px;
-
     line-height: 1.8;
-
     word-break: break-word;
-
 }
-
-
-/* =========================
-   STATUS
-========================= */
 
 .status {
-
     text-align: center;
-
     margin-top: 15px;
-
     font-weight: bold;
-
     line-height: 1.5;
-
 }
-
 
 .success {
-
     color: green;
-
 }
 
-
 .error {
-
     color: red;
+}
 
+.absenStatus {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8fafc;
+    border-radius: 8px;
+    line-height: 1.8;
 }
 
 </style>
 
 </head>
 
-
 <body>
-
 
 <div class="container">
 
 
-<!-- ==================================================
-     HALAMAN LOGIN
-================================================== -->
+<!-- =========================
+     LOGIN
+========================= -->
 
 <div id="loginPage">
 
+<h1>
+ABSENSI PPNPN IMIMOF
+</h1>
 
-    <h1>
+<p class="subtitle">
+Silakan login untuk melakukan absensi
+</p>
 
-        ABSENSI PPNPN IMIMOF
+<input
+type="text"
+id="nama"
+placeholder="Masukkan Nama Lengkap">
 
-    </h1>
+<input
+type="text"
+id="username"
+placeholder="Username">
 
+<input
+type="password"
+id="password"
+placeholder="Password">
 
-    <p class="subtitle">
+<button
+class="loginBtn"
+onclick="login()">
 
-        Silakan login untuk melakukan absensi
+LOGIN
 
-    </p>
+</button>
 
-
-    <!-- NAMA LENGKAP -->
-
-    <input
-
-        type="text"
-
-        id="nama"
-
-        placeholder="Masukkan Nama Lengkap"
-
-    >
-
-
-    <!-- USERNAME -->
-
-    <input
-
-        type="text"
-
-        id="username"
-
-        placeholder="Username"
-
-    >
-
-
-    <!-- PASSWORD -->
-
-    <input
-
-        type="password"
-
-        id="password"
-
-        placeholder="Password"
-
-    >
-
-
-    <!-- TOMBOL LOGIN -->
-
-    <button
-
-        onclick="login()"
-
-    >
-
-        LOGIN
-
-    </button>
-
-
-    <!-- PESAN LOGIN -->
-
-    <p
-
-        id="loginStatus"
-
-        class="status"
-
-    ></p>
-
+<p
+id="loginStatus"
+class="status">
+</p>
 
 </div>
 
 
-
-<!-- ==================================================
+<!-- =========================
      HALAMAN ABSENSI
-================================================== -->
+========================= -->
 
 <div
+id="absenPage"
+class="hidden">
 
-    id="absenPage"
+<h1>
+ABSENSI PPNPN IMIMOF
+</h1>
 
-    class="hidden"
+<p class="subtitle">
+Sistem Absensi Digital
+</p>
 
->
 
+<!-- INFORMASI PEGAWAI -->
 
-    <h1>
+<div class="info">
 
-        ABSENSI PPNPN IMIMOF
+<b>Nama:</b>
+<span id="namaUser"></span>
 
-    </h1>
+<br>
 
+<b>Username:</b>
+<span id="userLogin"></span>
 
-    <p class="subtitle">
+<br>
 
-        Sistem Absensi Digital
+<b>Tanggal:</b>
+<span id="tanggal"></span>
 
-    </p>
+<br>
 
-
-
-    <!-- INFORMASI PEGAWAI -->
-
-    <div class="info">
-
-
-        <b>Nama:</b>
-
-        <span
-
-            id="namaUser"
-
-        ></span>
-
-
-        <br>
-
-
-        <b>Username:</b>
-
-        <span
-
-            id="userLogin"
-
-        ></span>
-
-
-        <br>
-
-
-        <b>Tanggal:</b>
-
-        <span
-
-            id="tanggal"
-
-        ></span>
-
-
-        <br>
-
-
-        <b>Jam:</b>
-
-        <span
-
-            id="jam"
-
-        ></span>
-
-
-    </div>
-
-
-
-    <!-- TOMBOL ABSEN -->
-
-    <button
-
-        onclick="ambilLokasi()"
-
-    >
-
-        📍 ABSEN SEKARANG
-
-    </button>
-
-
-
-    <!-- INFORMASI GPS -->
-
-    <div
-
-        id="locationInfo"
-
-        class="location hidden"
-
-    >
-
-
-        <b>
-
-            📍 Lokasi GPS
-
-        </b>
-
-
-        <br><br>
-
-
-        Latitude:
-
-        <span
-
-            id="latitude"
-
-        ></span>
-
-
-        <br>
-
-
-        Longitude:
-
-        <span
-
-            id="longitude"
-
-        ></span>
-
-
-        <br>
-
-
-        Akurasi:
-
-        <span
-
-            id="akurasi"
-
-        ></span>
-
-        meter
-
-
-    </div>
-
-
-
-    <!-- STATUS ABSENSI -->
-
-    <p
-
-        id="absenStatus"
-
-        class="status"
-
-    ></p>
-
-
-
-    <!-- LOGOUT -->
-
-    <button
-
-        class="logout"
-
-        onclick="logout()"
-
-    >
-
-        LOGOUT
-
-    </button>
-
+<b>Jam:</b>
+<span id="jam"></span>
 
 </div>
 
 
+<!-- ABSEN MASUK -->
+
+<button
+class="masukBtn"
+onclick="absen('masuk')">
+
+🟢 ABSEN MASUK
+
+</button>
+
+
+<!-- ABSEN PULANG -->
+
+<button
+class="pulangBtn"
+onclick="absen('pulang')">
+
+🔴 ABSEN PULANG
+
+</button>
+
+
+<!-- INFORMASI GPS -->
+
+<div
+id="locationInfo"
+class="location hidden">
+
+<b>📍 Lokasi GPS</b>
+
+<br><br>
+
+Latitude:
+<span id="latitude"></span>
+
+<br>
+
+Longitude:
+<span id="longitude"></span>
+
+<br>
+
+Akurasi:
+<span id="akurasi"></span>
+meter
+
 </div>
 
+
+<!-- STATUS ABSENSI -->
+
+<div
+id="absenStatus"
+class="absenStatus">
+
+Belum melakukan absensi.
+
+</div>
+
+
+<!-- LOGOUT -->
+
+<button
+class="logout"
+onclick="logout()">
+
+LOGOUT
+
+</button>
+
+</div>
+
+</div>
 
 
 <script>
 
 
-/* ==================================================
+/* =========================
    AKUN LOGIN
-================================================== */
+========================= */
 
 const akun = {
 
-    username:
+username: "ppnpn",
 
-    "ppnpn",
-
-    password:
-
-    "123456"
+password: "123456"
 
 };
 
 
-
-/* ==================================================
-   FUNGSI LOGIN
-================================================== */
+/* =========================
+   LOGIN
+========================= */
 
 function login() {
 
+const nama =
+document
+.getElementById("nama")
+.value
+.trim();
 
-    /* Ambil nama */
+const username =
+document
+.getElementById("username")
+.value
+.trim();
 
-    const nama =
+const password =
+document
+.getElementById("password")
+.value;
 
-    document
+const status =
+document
+.getElementById("loginStatus");
 
-    .getElementById("nama")
 
-    .value
+if (nama === "") {
 
-    .trim();
+status.textContent =
+"Silakan masukkan nama lengkap.";
 
+status.className =
+"status error";
 
-
-    /* Ambil username */
-
-    const username =
-
-    document
-
-    .getElementById("username")
-
-    .value
-
-    .trim();
-
-
-
-    /* Ambil password */
-
-    const password =
-
-    document
-
-    .getElementById("password")
-
-    .value;
-
-
-
-    /* Status login */
-
-    const status =
-
-    document
-
-    .getElementById("loginStatus");
-
-
-
-    /* Cek nama */
-
-    if (nama === "") {
-
-
-        status.textContent =
-
-        "Silakan masukkan nama lengkap.";
-
-
-        status.className =
-
-        "status error";
-
-
-        return;
-
-    }
-
-
-
-    /* Cek username dan password */
-
-    if (
-
-        username === akun.username &&
-
-        password === akun.password
-
-    ) {
-
-
-        /* Sembunyikan halaman login */
-
-        document
-
-        .getElementById("loginPage")
-
-        .classList
-
-        .add("hidden");
-
-
-
-        /* Tampilkan halaman absensi */
-
-        document
-
-        .getElementById("absenPage")
-
-        .classList
-
-        .remove("hidden");
-
-
-
-        /* Tampilkan nama pegawai */
-
-        document
-
-        .getElementById("namaUser")
-
-        .textContent =
-
-        nama;
-
-
-
-        /* Tampilkan username */
-
-        document
-
-        .getElementById("userLogin")
-
-        .textContent =
-
-        username;
-
-
-
-        /* Tampilkan tanggal dan jam */
-
-        tampilkanWaktu();
-
-
-    }
-
-    else {
-
-
-        status.textContent =
-
-        "Username atau password salah!";
-
-
-        status.className =
-
-        "status error";
-
-
-    }
+return;
 
 }
 
 
+if (
+username === akun.username &&
+password === akun.password
+) {
 
-/* ==================================================
-   TANGGAL DAN JAM
-================================================== */
+document
+.getElementById("loginPage")
+.classList
+.add("hidden");
+
+document
+.getElementById("absenPage")
+.classList
+.remove("hidden");
+
+
+document
+.getElementById("namaUser")
+.textContent =
+nama;
+
+
+document
+.getElementById("userLogin")
+.textContent =
+username;
+
+
+tampilkanWaktu();
+
+}
+
+else {
+
+status.textContent =
+"Username atau password salah!";
+
+status.className =
+"status error";
+
+}
+
+}
+
+
+/* =========================
+   WAKTU
+========================= */
 
 function tampilkanWaktu() {
 
+const sekarang =
+new Date();
 
-    const sekarang =
+document
+.getElementById("tanggal")
+.textContent =
+sekarang
+.toLocaleDateString("id-ID");
 
-    new Date();
-
-
-
-    document
-
-    .getElementById("tanggal")
-
-    .textContent =
-
-    sekarang
-
-    .toLocaleDateString(
-
-        "id-ID"
-
-    );
-
-
-
-    document
-
-    .getElementById("jam")
-
-    .textContent =
-
-    sekarang
-
-    .toLocaleTimeString(
-
-        "id-ID"
-
-    );
+document
+.getElementById("jam")
+.textContent =
+sekarang
+.toLocaleTimeString("id-ID");
 
 }
 
-
-
-/* UPDATE JAM SETIAP DETIK */
-
 setInterval(
-
-    function() {
-
-
-        const halamanAbsen =
-
-        document
-
-        .getElementById("absenPage");
-
-
-
-        if (
-
-            !halamanAbsen
-
-            .classList
-
-            .contains("hidden")
-
-        ) {
-
-
-            tampilkanWaktu();
-
-
-        }
-
-
-    },
-
-    1000
-
+tampilkanWaktu,
+1000
 );
 
 
+/* =========================
+   ABSEN
+========================= */
 
-/* ==================================================
-   AMBIL LOKASI GPS
-================================================== */
+function absen(jenis) {
 
-function ambilLokasi() {
+const status =
+document
+.getElementById("absenStatus");
 
 
-    const status =
+if (!navigator.geolocation) {
 
-    document
+status.innerHTML =
+"❌ GPS tidak didukung.";
 
-    .getElementById("absenStatus");
-
-
-
-    /* Cek GPS */
-
-    if (
-
-        !navigator.geolocation
-
-    ) {
-
-
-        status.textContent =
-
-        "GPS tidak didukung oleh perangkat ini.";
-
-
-        status.className =
-
-        "status error";
-
-
-        return;
-
-    }
-
-
-
-    /* Pesan proses */
-
-    status.textContent =
-
-    "Sedang mengambil lokasi GPS...";
-
-
-    status.className =
-
-    "status";
-
-
-
-    /* Ambil lokasi */
-
-    navigator
-
-    .geolocation
-
-    .getCurrentPosition(
-
-
-        function(position) {
-
-
-            /* Latitude */
-
-            const latitude =
-
-            position
-
-            .coords
-
-            .latitude;
-
-
-
-            /* Longitude */
-
-            const longitude =
-
-            position
-
-            .coords
-
-            .longitude;
-
-
-
-            /* Akurasi */
-
-            const akurasi =
-
-            position
-
-            .coords
-
-            .accuracy;
-
-
-
-            /* Tampilkan Latitude */
-
-            document
-
-            .getElementById("latitude")
-
-            .textContent =
-
-            latitude
-
-            .toFixed(6);
-
-
-
-            /* Tampilkan Longitude */
-
-            document
-
-            .getElementById("longitude")
-
-            .textContent =
-
-            longitude
-
-            .toFixed(6);
-
-
-
-            /* Tampilkan Akurasi */
-
-            document
-
-            .getElementById("akurasi")
-
-            .textContent =
-
-            Math.round(
-
-                akurasi
-
-            );
-
-
-
-            /* Tampilkan kotak GPS */
-
-            document
-
-            .getElementById("locationInfo")
-
-            .classList
-
-            .remove("hidden");
-
-
-
-            /* Pesan berhasil */
-
-            status.textContent =
-
-            "✅ Absensi berhasil! Lokasi berhasil diambil.";
-
-
-            status.className =
-
-            "status success";
-
-
-        },
-
-
-        function(error) {
-
-
-            let pesan =
-
-            "Gagal mengambil lokasi.";
-
-
-
-            if (
-
-                error.code === 1
-
-            ) {
-
-
-                pesan =
-
-                "Izin lokasi ditolak. Silakan izinkan akses lokasi.";
-
-
-            }
-
-
-            else if (
-
-                error.code === 2
-
-            ) {
-
-
-                pesan =
-
-                "Lokasi tidak tersedia. Pastikan GPS aktif.";
-
-
-            }
-
-
-            else if (
-
-                error.code === 3
-
-            ) {
-
-
-                pesan =
-
-                "Waktu mengambil lokasi habis. Silakan coba lagi.";
-
-
-            }
-
-
-
-            status.textContent =
-
-            pesan;
-
-
-            status.className =
-
-            "status error";
-
-
-        },
-
-
-        {
-
-
-            enableHighAccuracy:
-
-            true,
-
-
-            timeout:
-
-            15000,
-
-
-            maximumAge:
-
-            0
-
-
-        }
-
-    );
+return;
 
 }
 
 
+status.innerHTML =
+"📍 Sedang mengambil lokasi GPS...";
 
-/* ==================================================
+
+navigator
+.geolocation
+.getCurrentPosition(
+
+function(position) {
+
+
+const latitude =
+position.coords.latitude;
+
+const longitude =
+position.coords.longitude;
+
+const akurasi =
+position.coords.accuracy;
+
+
+document
+.getElementById("latitude")
+.textContent =
+latitude.toFixed(6);
+
+
+document
+.getElementById("longitude")
+.textContent =
+longitude.toFixed(6);
+
+
+document
+.getElementById("akurasi")
+.textContent =
+Math.round(akurasi);
+
+
+document
+.getElementById("locationInfo")
+.classList
+.remove("hidden");
+
+
+const waktu =
+new Date()
+.toLocaleTimeString(
+"id-ID"
+);
+
+const tanggal =
+new Date()
+.toLocaleDateString(
+"id-ID"
+);
+
+
+const nama =
+document
+.getElementById("namaUser")
+.textContent;
+
+
+if (jenis === "masuk") {
+
+status.innerHTML =
+
+"🟢 <b>ABSEN MASUK BERHASIL</b><br><br>" +
+
+"Nama: " + nama +
+
+"<br>Tanggal: " + tanggal +
+
+"<br>Jam: " + waktu +
+
+"<br>Latitude: " +
+latitude.toFixed(6) +
+
+"<br>Longitude: " +
+longitude.toFixed(6);
+
+}
+
+else {
+
+status.innerHTML =
+
+"🔴 <b>ABSEN PULANG BERHASIL</b><br><br>" +
+
+"Nama: " + nama +
+
+"<br>Tanggal: " + tanggal +
+
+"<br>Jam: " + waktu +
+
+"<br>Latitude: " +
+latitude.toFixed(6) +
+
+"<br>Longitude: " +
+longitude.toFixed(6);
+
+}
+
+
+},
+
+function(error) {
+
+
+if (error.code === 1) {
+
+status.innerHTML =
+"❌ Izin lokasi ditolak. Silakan izinkan lokasi.";
+
+}
+
+else if (error.code === 2) {
+
+status.innerHTML =
+"❌ Lokasi tidak tersedia. Aktifkan GPS.";
+
+}
+
+else if (error.code === 3) {
+
+status.innerHTML =
+"❌ Waktu mengambil lokasi habis. Coba lagi.";
+
+}
+
+else {
+
+status.innerHTML =
+"❌ Gagal mengambil lokasi.";
+
+}
+
+},
+
+{
+
+enableHighAccuracy: true,
+
+timeout: 15000,
+
+maximumAge: 0
+
+}
+
+);
+
+}
+
+
+/* =========================
    LOGOUT
-================================================== */
+========================= */
 
 function logout() {
 
+document
+.getElementById("absenPage")
+.classList
+.add("hidden");
 
-    /* Sembunyikan halaman absensi */
-
-    document
-
-    .getElementById("absenPage")
-
-    .classList
-
-    .add("hidden");
-
+document
+.getElementById("loginPage")
+.classList
+.remove("hidden");
 
 
-    /* Tampilkan halaman login */
+document
+.getElementById("nama")
+.value = "";
 
-    document
+document
+.getElementById("username")
+.value = "";
 
-    .getElementById("loginPage")
-
-    .classList
-
-    .remove("hidden");
-
-
-
-    /* Kosongkan nama */
-
-    document
-
-    .getElementById("nama")
-
-    .value = "";
+document
+.getElementById("password")
+.value = "";
 
 
-
-    /* Kosongkan username */
-
-    document
-
-    .getElementById("username")
-
-    .value = "";
-
-
-
-    /* Kosongkan password */
-
-    document
-
-    .getElementById("password")
-
-    .value = "";
-
-
-
-    /* Kosongkan pesan */
-
-    document
-
-    .getElementById("loginStatus")
-
-    .textContent = "";
-
+document
+.getElementById("absenStatus")
+.innerHTML =
+"Belum melakukan absensi.";
 
 }
 
 </script>
-
 
 </body>
 
